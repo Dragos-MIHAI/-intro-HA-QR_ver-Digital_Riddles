@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <link rel="shortcut icon" type="image/x-icon" href="LOGO/favicon.ico" />
+      
+      </head>
+
+<title>Third Challenge: Third Problem</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<style>
+.button {
+  display: inline-block;
+  border-radius: 15px;
+  background-color: #04ad29f6;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('Background images/sunset.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.w3-display-middle {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 50%;
+  padding: 20px;
+}
+
+</style>
+
+
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    <a href="home.html" class="w3-bar-item w3-button w3-wide"> <- HackYou</a>
+  </div>
+
+  
+
+  <div class="w3-display-middle">
+    <p>Click on the picture below. First you need to estimate how many Confluente logos are on the picture (just a rough estimation). After that you need to find how many times that number is repeating in the image (this will later correspond to the current board number). Lastly, you will need to look for a small sentence that corresponds to the current name of the board. Please enter your answer below:</p>
+    <a href='Background images/challenge_conflu_nb.jpg'  target="_blank">
+      <img src='Background images/challenge_conflu_nb.jpg' alt="challenge 3, problem 3 picture" width="204" height="142" style="position:relative;left:330px;">
+    </a>
+    <p style="position:relative;left:80px;top:50px;color:rgb(12, 247, 12);font-style: bold;font-size:25px;">What is the number and full name of the current board of Confluente?</p>
+  <input type="text" id="test" style="position:relative;left:270px;top:50px;width: 308px;height: 46px;">
+  <input type="button" style="position:relative;left:270px;top:50px;width: 50px;height: 46px;" value="click" onclick="z()"><span style="position:relative;left:280px;top:50px;color:white" id="err"></span>
+    
+
+    
+
+    <script>
+    function z()
+    {
+    var a=document.getElementById("test");
+    if((a.value=="Board 6: Change of Seasons"))
+    {
+    document.getElementById('err').innerHTML= 'correct';
+    
+    var codeBlock = ' <div style="position:relative;left:350px;top:100px;"><button class="button" style="vertical-align:middle"><a href="Third_challenge_4.html"><span>Finish </span></a></button></div>';
+    
+    // Inserting the code block to wrapper element
+    document.getElementById("wrapper").innerHTML = codeBlock
+    
+    }
+    else
+    {
+    document.getElementById('err').innerHTML= 'wrong';
+    
+    }
+    
+    }
+    </script>
+    
+
+    <div id="wrapper"></div>
+
+    
+
+
+</div>
+
+  <div class="w3-display-bottomleft w3-padding-large">
+    Powered by <a href="https://www.hsaconfluente.nl/" target="_blank" class="w3-hover-text-light-blue">H.S.A. Confluente</a>
+  </div>
+
+    
+
+</div>
+<body>
+   
+
+</body>
+</html>
